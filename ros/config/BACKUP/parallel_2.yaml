@@ -1,0 +1,4 @@
+rostopic_name: "/pipelines/input/image"
+data_file: "data/obj.data"
+cfg_file: "cfg/yolo_obj.cfg"
+weights_file: "yolo_obj.weights"

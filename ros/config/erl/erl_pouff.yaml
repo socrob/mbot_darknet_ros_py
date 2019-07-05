@@ -1,0 +1,3 @@
+data_file: "data/pouff.data"
+cfg_file: "cfg/yolov3-pouff-mbot.cfg"
+weights_file: "../weights/yolov3-pouff_iteration16688.weights"

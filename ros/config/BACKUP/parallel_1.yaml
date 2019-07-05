@@ -1,0 +1,4 @@
+rostopic_name: "/pipelines/input/image"
+data_file: "cfg/coco.data"
+cfg_file: "cfg/yolov3.cfg"
+weights_file: "yolov3.weights"

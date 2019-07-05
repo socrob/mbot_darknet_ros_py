@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="debug" default="false"/> <!-- outputs a lot of stuff to stdout if enabled -->
+  <arg name="output" default="screen"/> <!-- show output - screen/log -->
+
+  <!--arg name="darknet_mode" default="darknet_no_gpu" /--> <!-- for not using gpu --> 
+  <arg name="darknet_mode" default="darknet_gpu"/> <!-- using gpu mode -->
+
+  <!--input topic - if compressed is found in the topic name, then CompressedImage transport is used -->
+  <arg name="input_topic" default="/usb_cam/image_raw"/>
+
+  <!-- remap the output topic to this -->
+  <arg name="detection_topic" default="~detections"/>
+
+  <!-- this is the threshold, between 0 and 1, such that detections below this value are discarded -->
+  <arg name="threshold" default="0.25"/>
+
+  <!-- if enabled, will only output the best detection on each frame -->
+  <arg name="only_best" default="false"/>
+  
+  <!-- maximum rate of detections (Hz), when not specified defaults to 100 -->
+  <arg name="max_detection_rate" default="100"/>
+
+  <!-- configuration file, with the YOLO data files -->
+  <arg name="config_file" default="$(find darknet_ros_py)/ros/config/default.yaml" />
+
+  <!-- if launching 2 YOLOs you will need to change node name-->
+  <arg name="node_name" default="object_detector"/>
+
+  <!-- usually dont change this -->
+  <param name="/darknet_bin_dir" type="string" value="$(find darknet_ros_py)/ros/binaries/$(arg darknet_mode)"/>
+
+  <!-- darknet ROS wrapper -->
+  <node pkg="darknet_ros_py" type="darknet_ros_py_node" name="$(arg node_name)" respawn="true" output="$(arg output)">
+    <rosparam file="$(arg config_file)"     command="load"/>
+ 	  <remap from="~detections"               to="$(arg detection_topic)"/>
+    <param name="debug"                     value="$(arg debug)"/>
+    <param name="input_topic"               value="$(arg input_topic)"/>
+    <param name="threshold"                 value="$(arg threshold)"/>
+    <param name="show_only_best_detection"  value="$(arg only_best)"/>
+    <param name="max_detection_rate"        value="$(arg max_detection_rate)"/>
+  </node>
+</launch>

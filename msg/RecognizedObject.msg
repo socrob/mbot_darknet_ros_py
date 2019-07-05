@@ -1,0 +1,3 @@
+string class_name
+float32 confidence
+sensor_msgs/RegionOfInterest bounding_box

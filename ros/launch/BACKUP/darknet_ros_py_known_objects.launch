@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <rosparam file="$(find darknet_ros_py)/ros/config/known_objects.yaml" command="load"/>
+  <param name="darknet_bin_dir" type="string" value="$(find darknet_ros_py)/ros/binaries/darknet_gpu"/>
+
+  <node pkg="darknet_ros_py" type="darknet_ros_py_node" name="darknet_ros" respawn="true" output="screen">
+  </node>
+</launch>

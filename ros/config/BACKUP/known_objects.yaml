@@ -1,0 +1,6 @@
+rostopic_name: "/head_camera/rgb/image_rect_color/compressed"
+data_file: "data/obj.data"
+cfg_file: "cfg/yolo_obj.cfg"
+weights_file: "yolo_obj.weights"
+threshold: 0.3
+debug: True

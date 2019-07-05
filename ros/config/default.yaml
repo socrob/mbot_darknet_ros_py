@@ -1,0 +1,3 @@
+data_file: "cfg/coco.data"
+cfg_file: "cfg/yolov3-mbot.cfg"
+weights_file: "../weights/yolov3.weights"

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  <rosparam file="$(find darknet_ros_py)/ros/config/open_challenge.yaml" command="load"/>
+  <param name="darknet_bin_dir" type="string" value="$(find darknet_ros_py)/ros/binaries/darknet_gpu"/>
+
+<node pkg="darknet_ros_py" type="darknet_ros_py_node" name="darknet_open_challenge" respawn="true" output="screen">
+      <remap from="/detection_result" to="/darknet_open_challenge/detections"/>
+      <remap from="/output/darknet/compressed" to="darknet_open_challenge/image/compressed"/>
+  </node>
+</launch>

@@ -1,0 +1,6 @@
+rostopic_name: "/head_camera/rgb/image_rect_color/compressed"
+data_file: "cfg/coco.data"
+cfg_file: "cfg/yolov3.cfg"
+weights_file: "yolov3.weights"
+threshold: 0.75
+debug: False

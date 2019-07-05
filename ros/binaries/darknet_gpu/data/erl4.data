@@ -1,0 +1,6 @@
+classes= 4
+train  = train.txt
+valid  = test.txt
+names = data/erl4.names
+backup = backup
+

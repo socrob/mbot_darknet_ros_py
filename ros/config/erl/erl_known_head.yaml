@@ -1,0 +1,3 @@
+data_file: "data/lis_v1.data"
+cfg_file: "cfg/yolov3-lis_v1-mbot.cfg"
+weights_file: "../weights/yolov3-lis_v1_4_10000-training-final.weights"

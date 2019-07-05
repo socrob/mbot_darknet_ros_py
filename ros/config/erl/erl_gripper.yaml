@@ -1,0 +1,3 @@
+data_file: "data/erl4.data"
+cfg_file: "cfg/yolov3-erl4-gripper.cfg"
+weights_file: "../weights/yolov3-erl4_final.weights"

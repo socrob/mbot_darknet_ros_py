@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>darknet_ros_py</name>
+  <version>0.0.0</version>
+  <description>The darknet_ros_py package</description>
+
+  <license>TODO</license>
+  
+  <maintainer email="enrico.piazza@polimi.it">Enrico Piazza</maintainer>
+  <author email="enrico.piazza@polimi.it">Enrico Piazza</author>
+  <author email="to.cartucho@gamil.com">Joao Cartucho</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>message_runtime</exec_depend>
+
+  <export>
+
+  </export>
+</package>

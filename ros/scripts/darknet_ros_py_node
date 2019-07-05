@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+
+import rospy
+from darknet_ros import darknet_ros_class
+
+if __name__ == '__main__':
+	try:
+		rospy.init_node('dark_ros_py_node')
+		rospy.loginfo("Node initialised")
+		
+		darknet_ros_class.DarknetRosPy().loop()
+		
+	except rospy.ROSInterruptException:
+		pass

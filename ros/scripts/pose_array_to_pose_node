@@ -1,0 +1,6 @@
+#!/usr/bin/env python
+
+import darknet_ros.pose_array_to_pose
+
+if __name__ == '__main__':
+    darknet_ros.pose_array_to_pose.main()
