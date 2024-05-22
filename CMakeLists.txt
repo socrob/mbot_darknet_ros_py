@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   sensor_msgs
   message_generation
+  mbot_perception_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -72,7 +73,9 @@ add_message_files(
 
 ## Generate added messages and services with any dependencies listed here
 generate_messages(
-    DEPENDENCIES sensor_msgs
+    DEPENDENCIES 
+    sensor_msgs
+    mbot_perception_msgs
 )
 
 ################################################
