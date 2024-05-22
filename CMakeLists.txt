@@ -53,6 +53,7 @@ add_message_files(
   RecognizedObject.msg
   RecognizedObjectArray.msg
   RecognizedObjectArrayStamped.msg
+  SyncLocalizerWithDetectron.msg
 )
 
 ## Generate services in the 'srv' folder
